@@ -39,7 +39,7 @@ Provision a small Amazon Linux EC2, install Java and the agent, and connect via 
 
 On that node, make sure Terraform + AWS CLI are installed (next step).
 
-Give it the label linux.
+Gives it the label linux.
 
 3) Install Terraform & AWS CLI on the agent
 
