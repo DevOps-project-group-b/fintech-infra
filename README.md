@@ -103,7 +103,7 @@ ID: aws-creds
 
 Access key ID / Secret access key: (use a least-privileged IAM user or consider an instance profile/assume-role pattern)
 
-Save
+Saves
 
 (If your Jenkins runs on an EC2 with an instance profile and you don’t want static keys, we can switch your Jenkinsfile to use withAWS(role: 'arn:aws:iam::<acct>:role/<RoleName>', region: params.REGION) { … } from the AWS Steps plugin. For now, your Jenkinsfile expects aws-creds.)
 
