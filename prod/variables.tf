@@ -63,7 +63,7 @@ variable "rolearn" {
 variable "ami_id" {
   description = "AMI ID for client nodes (leave empty to auto-fetch latest Ubuntu)"
   type        = string
-  default     = ""
+  default     = "ami-0cfde0ea8edd312d4"
 }
 
 variable "instance_type" {
