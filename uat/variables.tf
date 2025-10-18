@@ -79,7 +79,7 @@ variable "san_domains" {
 variable "route53_zone_id" {
   description = "Route 53 Hosted Zone ID"
   type        = string
-  default     = "ZC7WDABJDII2" # Replace with actual Route 53 Zone ID
+  default     = "Z0430189GCEXT7UMFVQL" # Replace with actual Route 53 Zone ID
 }
 
 
