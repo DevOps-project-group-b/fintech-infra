@@ -85,13 +85,13 @@ variable "key_name" {
 variable "domain_name" {
   description = "Primary domain name for certificate issuance"
   type        = string
-  default     = "*.dominionsystem.org"
+  default     = "*.escalantetech.click"
 }
 
 variable "san_domains" {
   description = "SANs (Subject Alternative Names) for SSL certificate"
   type        = list(string)
-  default     = ["*.dominionsystem.org"]
+  default     = ["*.escalantetech.click"]
 }
 
 variable "route53_zone_id" {
