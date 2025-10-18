@@ -85,7 +85,7 @@ variable "key_name" {
 variable "domain_name" {
   description = "Primary domain name for certificate issuance"
   type        = string
-  default     = "*.escalantetech.click"
+  default     = "escalantetech.click"
 }
 
 variable "san_domains" {
