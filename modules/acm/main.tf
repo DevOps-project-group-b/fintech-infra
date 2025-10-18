@@ -2,7 +2,7 @@ provider "aws" {
   region = "us-east-2"
 }
 
-resource "aws_acm_certificate" "fusisoft_cert" {
+resource "aws_acm_certificate" "escalantetech_cert" {
   domain_name       = var.domain_name
   subject_alternative_names = var.san_domains
   validation_method = "DNS"
@@ -34,6 +34,6 @@ resource "aws_route53_record" "cert_validation" {
 
 
 resource "aws_acm_certificate_validation" "cert" {
-  certificate_arn         = aws_acm_certificate.fusisoft_cert.arn
+  certificate_arn         = aws_acm_certificate.escalantetech_cert.arn
   validation_record_fqdns = [for record in aws_route53_record.cert_validation : record.fqdn]
 }
