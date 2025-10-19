@@ -28,7 +28,7 @@ resource "aws_route53_record" "cert_validation" {
   records         = [each.value.record]
   ttl             = 60
 
-  # allow Terraform to UPSERT the record if it already exists
+  ## allow Terraform to UPSERT the record if it already exists
   allow_overwrite = true
 }
 
@@ -38,7 +38,5 @@ resource "aws_acm_certificate_validation" "cert" {
   validation_record_fqdns = [for record in aws_route53_record.cert_validation : record.fqdn]
 }
 
-data "aws_route53_zone" "escalantetech" {
-  name         = "escalantetech.click"
-  private_zone = false
-}
+
+

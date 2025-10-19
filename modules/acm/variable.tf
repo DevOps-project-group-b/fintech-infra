@@ -25,8 +25,3 @@ variable "tags" {
     terraform = "true"
   }
 }
-
-data "aws_route53_zone" "escalantetech" {
-  name         = "escalantetech.click"
-  private_zone = false
-}
