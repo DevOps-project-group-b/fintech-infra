@@ -22,7 +22,7 @@ resource "aws_route53_record" "cert_validation" {
     }
   }
 
-  zone_id         = var.route53_zone_id
+  zone_id = data.aws_route53_zone.escalantetech.zone_id
   name            = each.value.name
   type            = each.value.type
   records         = [each.value.record]
@@ -36,4 +36,9 @@ resource "aws_route53_record" "cert_validation" {
 resource "aws_acm_certificate_validation" "cert" {
   certificate_arn         = aws_acm_certificate.escalantetech_cert.arn
   validation_record_fqdns = [for record in aws_route53_record.cert_validation : record.fqdn]
+}
+
+data "aws_route53_zone" "escalantetech" {
+  name         = "escalantetech.click"
+  private_zone = false
 }
