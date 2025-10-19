@@ -12,6 +12,12 @@ resource "aws_acm_certificate" "escalantetech_cert" {
   }
 }
 
+# Look up the hosted zone for escalantetech.click
+data "aws_route53_zone" "escalantetech" {
+  name         = "escalantetech.click"
+  private_zone = false
+}
+
 resource "aws_route53_record" "cert_validation" {
   for_each = {
     for dvo in aws_acm_certificate.escalantetech_cert.domain_validation_options :
