@@ -1,4 +1,4 @@
-Shemphad Global Concept, [11/1/2025 4:48 PM]
+
 #!/bin/bash
 # Run the sed command to eliminate hidden characters if needed:
 # sed -i 's/\r$//' sonar.sh
@@ -211,4 +211,5 @@ echo "NOTE: Default login is admin/admin. Change this immediately!"
 echo "=========================================================================="
 echo "Open a new SSH session or run: source ~/.bashrc"
 echo "Test Maven: mvn -version"
+
 
